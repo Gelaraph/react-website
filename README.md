@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+1. List five significant features of React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+   - Components Support
+     ReactJS is a perfect combination of JavaScript and HTML tags. The usage of the HTML tags and JS codes, make it easy to deal with a vast set of data containing the document object model. During this time, ReactJS works as a mediator which represents the DOM and assists to decide which component needs changes to get the exact results.
 
-## Available Scripts
+   - SEO-friendly: React JS was introduced after immense research and improvements by Facebook. Naturally, it stands out from the crowd and allows developers to build amazing, SEO-friendly user interfaces across browsers and engines.
 
-In the project directory, you can run:
+   - Proficient Data Binding: ReactJS trails one-way data binding. This means that absolutely anyone can track all the changes made to any particular segment of the data. This is a symbol of its simplicity.
 
-### `npm start`
+   - Virtual DOM: React uses a Virtual DOM to update the UI efficiently. The Virtual DOM is a lightweight representation of the actual DOM, and React uses it to track changes and update only the parts of the UI that need to be updated, rather than re-rendering the entire UI.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - Unidirectional Data Flow: React follows a unidirectional data flow, which means that data flows in a single direction, from parent components to child components. This helps to prevent unexpected changes to the UI, as data is always passed down from the parent component, rather than being updated directly by child components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. List five major advantages of React
 
-### `npm test`
+   - Makes JavaScript coding easier
+   - Excellent cross-platform support
+   - Handles dependencies
+   - Provides amazing developer tools
+   - Easy to adopt
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. What is the name of the Software Engineer that created React? Also, which company owns React?
 
-### `npm run build`
+   - React was created by Jordan Walke, a software engineer at Facebook, in 2011 and it was later released as an open-source project in 2013. Presently, React is owned and maintained by Facebook.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. What are the notable differences between HTML & JSX? Give at least 3 of them
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   - In HTML, multiple elements can be returned.
+     For example:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+     ```
+         <ul>
+             <li>unordered list
+                 <ol>
+                     <li>ordered list</li>
+                     <li>ordered list</li>
+                     <li>ordered list</li>
+                 </ol>
+             </li>
+             <li>unordered list</li>
+             <li>unordered list</li>
+         </ul>
+     ```
 
-### `npm run eject`
+   - while nested JSX must return one element, which we’ll call a parent element that wraps all other levels of nested elements:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+  <div>
+      <p>pink</p>
+      <p>yellow</p>
+      <p>green</p>
+  </div>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Without the wrapper element, JSX won’t transpile. In React, we can render JSX directly into HTML DOM using React rendering API, aka ReactDOM. The formula for rendering React elements seems like this:
+ReactDOM.render(componentToRender, targetNode)
+ReactDOM.render() must be called after the JSX elements declarations.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- It is not necessary to use camelCase for attributes, ids and event references. Its totally your call to use camelCase, lowercase or hyphens for naming them.
+  All HTML attributes and event references in JSX become camelCase, this way, onclick event becomes onClick and onchange — onChange.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- In HTML almost all tags have an opening and a closing tag except probably a few like <br/>
+  While in JSX, however, any element can be written as a self-closing tag, for example: <div/>
+  Example:
 
-## Learn More
+```
+const string = <img src={user.avatarUrl}  />;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Why can’t browsers read JSX?
+   - Browsers cannot read JSX directly because it is not a valid JavaScript syntax. JSX is a syntax extension for JavaScript that allows developers to write HTML-like code within JavaScript.
